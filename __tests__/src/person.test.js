@@ -12,12 +12,10 @@ describe("Testing Person", () => {
         ]
         /* When */
         const actualResult = filterByGender(people, "F");
-
         /* Then */
         expect(actualResult).toHaveLength(1);
         expect(actualResult).toEqual(expectedResult);
     });
-
     test("should filter People by wrong Gender", () => {
         /* Given */
         const people = [
@@ -27,7 +25,6 @@ describe("Testing Person", () => {
         const expectedResult = []
         /* When */
         const actualResult = filterByGender(people, "D");
-
         /* Then */
         expect(actualResult).toHaveLength(0);
         expect(actualResult).toEqual(expectedResult);

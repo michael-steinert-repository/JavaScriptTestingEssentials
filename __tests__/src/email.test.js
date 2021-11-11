@@ -15,7 +15,6 @@ describe("Testing Email", () => {
             });
         });
     });
-
     describe("Testing Email with Tagged Template Literal Testing", () => {
         describe.each`
             email | expectedResult

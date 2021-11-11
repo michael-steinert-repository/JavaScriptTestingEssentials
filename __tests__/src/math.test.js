@@ -15,7 +15,6 @@ describe("Testing Math.js", () => {
             expect(actualResult).toBe(expectedResult);
         });
     });
-
     describe("Testing Occurrences", () => {
         test("it should find Number of Occurrences", () => {
             /* Given */
@@ -26,7 +25,6 @@ describe("Testing Math.js", () => {
             /* Then */
             expect(actualResult).toBe(expectedNumber);
         });
-
         test("it should find Number of Occurrences when not found", () => {
             /* Given */
             const numbers = [1, 2, 2, 2, 5];
@@ -36,13 +34,19 @@ describe("Testing Math.js", () => {
             expect(actualResult).toBe(0);
         });
     });
-
     describe("Testing Exceptions", () => {
         test("it should throw an Exception if Input is not a Number", () => {
             /* Given */
             const numbers = [];
             /* When - Then */
             expect(() => numberOfOccurrences(numbers, "a")).toThrow("a is not a Number");
+        });
+        test("it should throw an Exception if Input is not a Number", () => {
+            /* Given */
+            const numbers = [];
+            const searchNumber = "a";
+           /* When - Then */
+            expect(() => numberOfOccurrences(numbers, searchNumber)).toThrow(`${searchNumber} is not a Number`);
         });
     });
 });
